@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- Specifies the language of the document as English -->
+  <head>
+    <meta charset="utf-8" /> <!-- Sets the character encoding for the document to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ensures proper scaling on different devices -->
+    <link rel="stylesheet" href="styles.css" /> <!-- Links to the external CSS file for styling -->
+    <title>Calorie Counter</title> <!-- Sets the title of the webpage -->
+  </head>
+  <body>
+    <main>
+      <h1>Calorie Counter</h1> <!-- Main heading of the webpage -->
+      <div class="container">
+        <!-- Container for the form and output -->
+        <form id="calorie-counter"> <!-- Form element for the calorie counter, identified by an ID -->
+          <label for="budget">Budget</label> <!-- Label for the budget input -->
+          <input
+            type="number" <!-- Input type for numerical values -->
+            min="0" <!-- Minimum value for the input is 0 -->
+            id="budget" <!-- ID to identify the input element -->
+            placeholder="Daily calorie budget" <!-- Placeholder text for the input field -->
+            required <!-- Makes the input field required -->
+          />
+          <!-- Fieldset for breakfast entries -->
+          <fieldset id="breakfast">
+            <legend>Breakfast</legend> <!-- Legend for the fieldset, indicating it is for breakfast -->
+            <div class="input-container"></div> <!-- Container for dynamically added input fields -->
+          </fieldset>
+          <!-- Fieldset for lunch entries -->
+          <fieldset id="lunch">
+            <legend>Lunch</legend> <!-- Legend for the fieldset, indicating it is for lunch -->
+            <div class="input-container"></div> <!-- Container for dynamically added input fields -->
+          </fieldset>
+          <!-- Fieldset for dinner entries -->
+          <fieldset id="dinner">
+            <legend>Dinner</legend> <!-- Legend for the fieldset, indicating it is for dinner -->
+            <div class="input-container"></div> <!-- Container for dynamically added input fields -->
+          </fieldset>
+          <!-- Fieldset for snacks entries -->
+          <fieldset id="snacks">
+            <legend>Snacks</legend> <!-- Legend for the fieldset, indicating it is for snacks -->
+            <div class="input-container"></div> <!-- Container for dynamically added input fields -->
+          </fieldset>
+          <!-- Fieldset for exercise entries -->
+          <fieldset id="exercise">
+            <legend>Exercise</legend> <!-- Legend for the fieldset, indicating it is for exercise -->
+            <div class="input-container"></div> <!-- Container for dynamically added input fields -->
+          </fieldset>
+          <!-- Controls section for adding entries -->
+          <div class="controls">
+            <span>
+              <label for="entry-dropdown">Add food or exercise:</label> <!-- Label for the dropdown menu -->
+              <select id="entry-dropdown" name="options"> <!-- Dropdown menu to select entry type -->
+                <option value="breakfast" selected>Breakfast</option> <!-- Option for breakfast, selected by default -->
+                <option value="lunch">Lunch</option> <!-- Option for lunch -->
+                <option value="dinner">Dinner</option> <!-- Option for dinner -->
+                <option value="snacks">Snacks</option> <!-- Option for snacks -->
+                <option value="exercise">Exercise</option> <!-- Option for exercise -->
+              </select>
+              <button type="button" id="add-entry">Add Entry</button> <!-- Button to add a new entry -->
+            </span>
+          </div>
+          <!-- Buttons for calculating and clearing the form -->
+          <div>
+            <button type="submit"> <!-- Button to submit the form and calculate remaining calories -->
+              Calculate Remaining Calories
+            </button>
+            <button type="button" id="clear">Clear</button> <!-- Button to clear the form -->
+          </div>
+        </form>
+        <div id="output" class="output hide"></div> <!-- Div to display the result, initially hidden -->
+      </div>
+    </main>
+    <script src="./script.js"></script> <!-- Links to the external JavaScript file -->
+  </body>
+</html>

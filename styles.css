@@ -1,0 +1,103 @@
+:root {
+    /* Define CSS variables for colors */
+    --light-grey: #f5f6f7;
+    --dark-blue: #0a0a23;
+    --fcc-blue: #1b1b32;
+    --light-yellow: #fecc4c;
+    --dark-yellow: #feac32;
+    --light-pink: #ffadad;
+    --dark-red: #850000;
+    --light-green: #acd157;
+  }
+  
+  body {
+    /* Set font styles and background color for the body */
+    font-family: "Lato", Helvetica, Arial, sans-serif; /* Font family */
+    font-size: 18px; /* Base font size */
+    background-color: var(--fcc-blue); /* Background color using a CSS variable */
+    color: var(--light-grey); /* Text color using a CSS variable */
+  }
+  
+  h1 {
+    /* Center align the main heading */
+    text-align: center;
+  }
+  
+  .container {
+    /* Set width and max-width for the container */
+    width: 90%;
+    max-width: 680px;
+  }
+  
+  h1,
+  .container,
+  .output {
+    /* Apply margin to heading, container, and output elements */
+    margin: 20px auto;
+  }
+  
+  label,
+  legend {
+    /* Make labels and legends bold */
+    font-weight: bold;
+  }
+  
+  .input-container {
+    /* Flexbox for input container to arrange items in a column */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    /* Styles for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove text decoration */
+    background-color: var(--light-yellow); /* Background color using a CSS variable */
+    border: 2px solid var(--dark-yellow); /* Border color using a CSS variable */
+  }
+  
+  button,
+  input,
+  select {
+    /* Common styles for buttons, inputs, and selects */
+    min-height: 24px; /* Minimum height */
+    color: var(--dark-blue); /* Text color using a CSS variable */
+  }
+  
+  fieldset,
+  label,
+  button,
+  input,
+  select {
+    /* Margin bottom for fieldsets, labels, buttons, inputs, and selects */
+    margin-bottom: 10px;
+  }
+  
+  .output {
+    /* Styles for the output div */
+    border: 2px solid var(--light-grey); /* Border color using a CSS variable */
+    padding: 10px; /* Padding */
+    text-align: center; /* Center align text */
+  }
+  
+  .hide {
+    /* Utility class to hide elements */
+    display: none;
+  }
+  
+  .output span {
+    /* Styles for span inside output div */
+    font-weight: bold; /* Bold text */
+    font-size: 1.2em; /* Increase font size */
+  }
+  
+  .surplus {
+    /* Text color for surplus using a CSS variable */
+    color: var(--light-pink);
+  }
+  
+  .deficit {
+    /* Text color for deficit using a CSS variable */
+    color: var(--light-green);
+  }
+  
